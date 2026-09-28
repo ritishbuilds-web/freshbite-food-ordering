@@ -298,3 +298,139 @@ select:focus {
 .hero-content {
     animation: fadeIn 0.8s ease;
 }
+
+/* Mobile menu button */
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--dark);
+}
+
+/* Tablet layout */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        order: 3;
+        background: white;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        border-top: 1px solid var(--border);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 5px;
+    }
+
+    .cart-button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 50px 6%;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 45px 5%;
+    }
+
+    .section h2 {
+        font-size: 1.6rem;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .restaurant-grid,
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-image {
+        height: 200px;
+    }
+
+    form {
+        max-width: 100%;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .category-card {
+        padding: 18px 10px;
+        font-size: 1rem;
+    }
+
+    .cart-button {
+        font-size: 0.8rem;
+    }
+}
