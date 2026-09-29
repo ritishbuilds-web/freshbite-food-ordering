@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | FreshBite</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="brand-mark">F</span><span>FreshBite</span></a>
+        <button class="mobile-menu" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="restaurants.html">Restaurants</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html" class="active">Account</a>
+        </div>
+        <div class="nav-actions">
+          <a class="icon-btn cart-link" href="cart.html" aria-label="View cart">🛒<span class="cart-badge cart-count">0</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div class="container page-banner-inner">
+          <div>
+            <div class="breadcrumb">Home / Login</div>
+            <h1>Welcome back</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div class="container auth-layout">
+          <div class="form-box">
+            <h2>Login</h2>
+            <p style="margin-top: -6px; color: rgba(45,27,18,0.7);">Authentication is simulated for this frontend demo.</p>
+            <form id="login-form">
+              <div class="form-group">
+                <label for="login-email">Email</label>
+                <input class="form-control" id="login-email" name="email" type="email" placeholder="you@example.com" />
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label>
+                <input class="form-control" id="login-password" name="password" type="password" placeholder="Enter your password" />
+              </div>
+              <button type="submit" class="primary-btn" style="width:100%;">Login</button>
+            </form>
+            <p style="margin-top: 18px;">New here? <a href="register.html" style="color: var(--orange); font-weight: 700;">Create an account</a></p>
+          </div>
+
+          <aside class="auth-side">
+            <h3>Demo login</h3>
+            <p>Use the demo credentials in README.md or create a new account.</p>
+            <ul>
+              <li>Secure login is simulated for this frontend demo.</li>
+              <li>No real user data is stored on a server.</li>
+              <li>Data is stored locally in your browser.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 16px; color: var(--white);"><span class="brand-mark">F</span><span>FreshBite</span></div>
+          <p>Fast, friendly, and beginner-friendly food ordering demo.</p>
+        </div>
+        <div>
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Note</h4>
+          <ul>
+            <li>Demo only</li>
+            <li>No real backend</li>
+            <li>Frontend project</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">© 2026 FreshBite</div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

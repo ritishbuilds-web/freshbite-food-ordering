@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | FreshBite</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="brand-mark">F</span><span>FreshBite</span></a>
+        <button class="mobile-menu" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="restaurants.html">Restaurants</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="account.html" data-user-label>Account</a>
+        </div>
+        <div class="nav-actions">
+          <a class="icon-btn cart-link" href="cart.html" aria-label="View cart">🛒<span class="cart-badge cart-count">0</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div class="container page-banner-inner">
+          <div>
+            <div class="breadcrumb">Home / Checkout</div>
+            <h1>Secure checkout</h1>
+          </div>
+          <a href="cart.html" class="secondary-btn">Back to cart</a>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div class="container checkout-grid">
+          <form id="checkout-form" class="order-form">
+            <h3>Delivery details</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="customer-name">Full name</label>
+                <input class="form-control" id="customer-name" name="customer-name" type="text" />
+              </div>
+              <div class="form-group">
+                <label for="customer-email">Email address</label>
+                <input class="form-control" id="customer-email" name="customer-email" type="email" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="customer-phone">Phone number</label>
+                <input class="form-control" id="customer-phone" name="customer-phone" type="tel" />
+              </div>
+              <div class="form-group">
+                <label for="delivery-city">City</label>
+                <input class="form-control" id="delivery-city" name="delivery-city" type="text" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="delivery-address">Delivery address</label>
+              <textarea class="textarea-control" id="delivery-address" name="delivery-address" rows="3"></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="postal-code">Postal code</label>
+                <input class="form-control" id="postal-code" name="postal-code" type="text" />
+              </div>
+              <div class="form-group">
+                <label for="delivery-time">Estimated delivery</label>
+                <input class="form-control" id="delivery-time" type="text" value="25-35 min" readonly />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="instructions">Delivery instructions</label>
+              <textarea class="textarea-control" id="instructions" name="instructions" rows="3" placeholder="Gate code, landmark, etc."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Payment method</label>
+              <div class="payment-options">
+                <label class="payment-option"><input type="radio" name="payment-method" value="Cash on Delivery" checked /> Cash on Delivery</label>
+                <label class="payment-option"><input type="radio" name="payment-method" value="UPI (simulated)" /> UPI (simulated)</label>
+                <label class="payment-option"><input type="radio" name="payment-method" value="Card Payment (simulated)" /> Card Payment (simulated)</label>
+              </div>
+            </div>
+
+            <button type="submit" class="primary-btn" style="width:100%; margin-top:6px;">Place Order</button>
+          </form>
+
+          <aside id="checkout-summary" class="order-summary"></aside>
+        </div>
+
+        <div class="container" style="margin-top: 24px;">
+          <div id="order-confirmation"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 16px; color: var(--white);"><span class="brand-mark">F</span><span>FreshBite</span></div>
+          <p>Demo checkout experience with simulated payment flows for learning purposes.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Note</h4>
+          <ul>
+            <li>Payments are simulated</li>
+            <li>No real credentials used</li>
+            <li>Demo only</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">© 2026 FreshBite</div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

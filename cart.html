@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart | FreshBite</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="brand-mark">F</span><span>FreshBite</span></a>
+        <button class="mobile-menu" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="restaurants.html">Restaurants</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="account.html" data-user-label>Account</a>
+        </div>
+        <div class="nav-actions">
+          <a class="icon-btn cart-link" href="cart.html" aria-label="View cart">🛒<span class="cart-badge cart-count">0</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div class="container page-banner-inner">
+          <div>
+            <div class="breadcrumb">Home / Cart</div>
+            <h1>Your cart</h1>
+          </div>
+          <button id="clear-cart" class="secondary-btn" type="button">Clear cart</button>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div class="container cart-layout">
+          <div id="cart-items" class="cart-items"></div>
+
+          <aside id="cart-summary" class="summary-box">
+            <h3>Order Summary</h3>
+          </aside>
+        </div>
+
+        <div class="container" style="margin-top: 28px;">
+          <div class="summary-box" style="max-width: 420px; margin-left: auto;">
+            <h3>Apply Coupon</h3>
+            <form id="coupon-form" class="coupon-box">
+              <input id="coupon-code" type="text" placeholder="Enter code" aria-label="Coupon code" />
+              <button type="submit" class="primary-btn">Apply</button>
+            </form>
+            <a id="checkout-btn" href="checkout.html" class="primary-btn" style="width:100%;">Proceed to Checkout</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 16px; color: var(--white);"><span class="brand-mark">F</span><span>FreshBite</span></div>
+          <p>Fresh, fast, and flavorful. Building your perfect order every day.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Support</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <ul>
+            <li>Open daily</li>
+            <li>9 AM – 11 PM</li>
+            <li>+91 98765 43210</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">© 2026 FreshBite</div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

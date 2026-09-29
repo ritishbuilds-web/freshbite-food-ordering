@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | FreshBite</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="brand-mark">F</span><span>FreshBite</span></a>
+        <button class="mobile-menu" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="restaurants.html">Restaurants</a>
+          <a href="menu.html" class="active">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="account.html" data-user-label>Account</a>
+        </div>
+        <div class="nav-actions">
+          <a class="icon-btn cart-link" href="cart.html" aria-label="View cart">🛒<span class="cart-badge cart-count">0</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div class="container page-banner-inner">
+          <div>
+            <div class="breadcrumb">Home / Menu</div>
+            <h1>Fresh picks for every craving</h1>
+          </div>
+          <span id="selected-restaurant" class="breadcrumb">All menu items</span>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div class="container">
+          <div class="filters-wrap">
+            <div class="filter-field" style="flex: 1; min-width: 220px;">
+              <label for="food-search">Search dishes</label>
+              <input id="food-search" type="search" placeholder="Search by food name" />
+            </div>
+            <div class="filter-field">
+              <label for="food-category">Category</label>
+              <select id="food-category">
+                <option value="All">All</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Burgers">Burgers</option>
+                <option value="Indian">Indian</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Desserts">Desserts</option>
+                <option value="Beverages">Beverages</option>
+                <option value="Japanese">Japanese</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label for="dietary-filter">Dietary</label>
+              <select id="dietary-filter">
+                <option value="All">All</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Non-Vegetarian">Non-Vegetarian</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label for="menu-sort">Sort by</label>
+              <select id="menu-sort">
+                <option value="popular">Popularity</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Rating</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="category-bar" class="category-strip"></div>
+          <div id="menu-list" class="grid card-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 16px; color: var(--white);"><span class="brand-mark">F</span><span>FreshBite</span></div>
+          <p>Everything you crave, prepared with care and delivered with speed.</p>
+        </div>
+        <div>
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="menu.html">Pizza</a></li>
+            <li><a href="menu.html">Burgers</a></li>
+            <li><a href="menu.html">Indian</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <ul>
+            <li>Mon-Sun</li>
+            <li>10:00 AM - 11:30 PM</li>
+            <li>Support available</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">© 2026 FreshBite</div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>

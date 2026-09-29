@@ -1,226 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreshBite | Food Delivery</title>
+    <meta
+      name="description"
+      content="FreshBite brings the best local restaurants and favorite comfort foods right to your door."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="brand-mark">F</span><span>FreshBite</span></a>
+        <button class="mobile-menu" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <div class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="restaurants.html">Restaurants</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="account.html" data-user-label>Account</a>
+        </div>
 
-    <title>FreshBite - Online Food Ordering</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <header>
-        <nav class="navbar">
-            <a href="#home" class="logo">🍕 FreshBite</a>
-
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                ☰
-            </button>
-
-
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#restaurants">Restaurants</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-            <a href="#cart" class="cart-button">
-                🛒 Cart <span class="cart-count">0</span>
-            </a>
-        </nav>
+        <div class="nav-actions">
+          <a class="icon-btn cart-link" href="cart.html" aria-label="View cart">
+            🛒
+            <span class="cart-badge cart-count">0</span>
+          </a>
+        </div>
+      </nav>
     </header>
 
     <main>
-
-        <!-- Home -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Delicious Food, Delivered Fresh!</h1>
-
-                <p>
-                    Discover your favorite meals and enjoy
-                    delicious food delivered to your doorstep.
-                </p>
-
-                <a href="#menu" class="btn">Explore Menu</a>
-            </div>
-        </section>
-
-        <!-- Categories -->
-        <section id="categories" class="section">
-            <h2>Explore Categories</h2>
-
-            <div class="category-grid">
-                <div class="category-card">🍕 Pizza</div>
-                <div class="category-card">🍔 Burgers</div>
-                <div class="category-card">🍛 Indian</div>
-                <div class="category-card">🍰 Desserts</div>
-            </div>
-        </section>
-
-        <!-- Restaurants -->
-        <section id="restaurants" class="section">
-            <h2>Popular Restaurants</h2>
-
-            <div class="restaurant-grid">
-                <article class="restaurant-card">
-                    <h3>Urban Bites</h3>
-                    <p>Pizza, Burgers</p>
-                    <p>⭐ 4.5 · 25–35 min</p>
-                </article>
-
-                <article class="restaurant-card">
-                    <h3>Spice Garden</h3>
-                    <p>Indian Cuisine</p>
-                    <p>⭐ 4.7 · 30–40 min</p>
-                </article>
-
-                <article class="restaurant-card">
-                    <h3>Sweet Cravings</h3>
-                    <p>Desserts, Bakery</p>
-                    <p>⭐ 4.6 · 20–30 min</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- Menu -->
-        <section id="menu" class="section">
-            <h2>Our Popular Menu</h2>
-
-            <div class="menu-grid">
-
-                <article class="food-card">
-                    <div class="food-image">🍕</div>
-                    <h3>Margherita Pizza</h3>
-                    <p>Classic cheese pizza with fresh tomatoes.</p>
-                    <p class="price">₹299</p>
-                    <button class="btn">Add to Cart</button>
-                </article>
-
-                <article class="food-card">
-                    <div class="food-image">🍔</div>
-                    <h3>Chicken Burger</h3>
-                    <p>Juicy chicken patty with fresh vegetables.</p>
-                    <p class="price">₹199</p>
-                    <button class="btn">Add to Cart</button>
-                </article>
-
-                <article class="food-card">
-                    <div class="food-image">🍟</div>
-                    <h3>French Fries</h3>
-                    <p>Crispy golden fries with seasoning.</p>
-                    <p class="price">₹99</p>
-                    <button class="btn">Add to Cart</button>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Product Details -->
-        <section id="product-details" class="section">
-            <h2>Food Details</h2>
-            <p>Select a food item to explore its details.</p>
-        </section>
-
-        <!-- Cart -->
-        <section id="cart" class="section">
-            <h2>Your Shopping Cart</h2>
-
-            <div id="cart-items">
-                <p>Your cart is empty.</p>
-            </div>
-
-            <h3>Total: ₹<span id="cart-total">0</span></h3>
-
-            <a href="#checkout" class="btn">Proceed to Checkout</a>
-        </section>
-
-        <!-- Checkout -->
-        <section id="checkout" class="section">
-            <h2>Checkout</h2>
-
-            <form id="checkout-form">
-
-                <label for="customer-name">Full Name</label>
-                <input type="text" id="customer-name" required>
-
-                <label for="customer-address">Delivery Address</label>
-                <textarea id="customer-address" required></textarea>
-
-                <label for="payment-method">Payment Method</label>
-                <select id="payment-method">
-                    <option value="cod">Cash on Delivery</option>
-                    <option value="upi">UPI (Simulation)</option>
-                </select>
-
-                <button type="submit" class="btn">Place Order</button>
-
-            </form>
-        </section>
-
-        <!-- Login/Register -->
-        <section id="login" class="section">
-            <h2>Login / Register</h2>
-
-            <form id="login-form">
-                <label for="email">Email</label>
-                <input type="email" id="email" required>
-
-                <label for="password">Password</label>
-                <input type="password" id="password" required>
-
-                <button type="submit" class="btn">Login</button>
-            </form>
-        </section>
-
-        <!-- User Account -->
-        <section id="account" class="section">
-            <h2>My Account</h2>
-            <p>View your profile, orders, saved addresses, and wishlist.</p>
-        </section>
-
-        <!-- About -->
-        <section id="about" class="section">
-            <h2>About FreshBite</h2>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <div class="eyebrow">Fast delivery • Premium taste</div>
+            <h1>Hungry? FreshBite has your next favorite meal.</h1>
             <p>
-                FreshBite brings delicious meals from popular restaurants
-                straight to your doorstep.
+              Discover trending dishes, local favorites, and smooth delivery from the restaurants you love.
             </p>
-        </section>
 
-        <!-- Contact -->
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-
-            <form id="contact-form">
-                <label for="contact-name">Name</label>
-                <input type="text" id="contact-name" required>
-
-                <label for="contact-email">Email</label>
-                <input type="email" id="contact-email" required>
-
-                <label for="contact-message">Message</label>
-                <textarea id="contact-message" required></textarea>
-
-                <button type="submit" class="btn">Send Message</button>
+            <form class="hero-search" data-global-search>
+              <input type="search" placeholder="Search food, cuisine, or restaurant" aria-label="Search menu" />
+              <button type="submit" class="primary-btn">Search</button>
             </form>
-        </section>
 
+            <div class="hero-actions">
+              <a href="menu.html" class="primary-btn">Explore menu</a>
+              <a href="restaurants.html" class="secondary-btn">Browse restaurants</a>
+            </div>
+
+            <div class="quick-stats">
+              <div class="quick-stat">
+                <strong>10k+</strong>
+                <span>Orders delivered</span>
+              </div>
+              <div class="quick-stat">
+                <strong>4.8/5</strong>
+                <span>Average rating</span>
+              </div>
+              <div class="quick-stat">
+                <strong>20 min</strong>
+                <span>Fast delivery</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="floating-card top-card">
+              <span class="mini-label">Live order</span>
+              <strong>Paneer Butter Masala</strong>
+              <small>Delivery in 18 mins</small>
+            </div>
+
+            <img
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80"
+              alt="Fresh and tasty food"
+            />
+
+            <div class="floating-card bottom-card">
+              <div class="rating-line">★★★★★</div>
+              <strong>4.9 customer rating</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Popular restaurants</h2>
+            <p>Fresh flavors, quick delivery, and everyday favorites from around the city.</p>
+          </div>
+          <div id="featured-restaurants" class="grid card-grid"></div>
+        </div>
+      </section>
+
+      <section class="section alt-section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Trending right now</h2>
+            <p>Customer favorites from our most-loved kitchens, ready to order in minutes.</p>
+          </div>
+          <div id="featured-dishes" class="grid card-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>How it works</h2>
+            <p>From choosing your cravings to doorstep delivery, it only takes a few quick steps.</p>
+          </div>
+
+          <div class="steps">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h3>Choose</h3>
+              <p>Browse restaurants and dishes that match your mood.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h3>Customize</h3>
+              <p>Adjust quantities, favorites, and any meal preferences.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h3>Checkout</h3>
+              <p>Place your order with a few taps and secure demo payment.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">4</div>
+              <h3>Enjoy</h3>
+              <p>Savor every fresh bite as it arrives at your doorstep.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt-section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Customer love</h2>
+            <p>Real feedback from users who keep coming back for more.</p>
+          </div>
+          <div id="homepage-reviews" class="review-grid"></div>
+        </div>
+      </section>
+
+      <section class="section promo-strip">
+        <div class="container promo-box">
+          <div>
+            <span class="eyebrow">Limited time offer</span>
+            <h2>Get 10% off your first order with WELCOME10</h2>
+          </div>
+          <a href="menu.html" class="primary-btn">Order now</a>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <p>© 2026 FreshBite. All rights reserved.</p>
+      <div class="container footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 16px; color: var(--white);"><span class="brand-mark">F</span><span>FreshBite</span></div>
+          <p>Bringing quality food and convenience together in one polished experience for modern city dining.</p>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="menu.html">Menu</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">My account</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Visit</h4>
+          <ul>
+            <li>Bengaluru</li>
+            <li>Open daily</li>
+            <li>10 AM - 11:30 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">© 2026 FreshBite</div>
     </footer>
 
-    <script src="script.js"></script>
-
-</body>
-
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>

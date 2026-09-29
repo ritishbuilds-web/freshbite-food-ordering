@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account | FreshBite</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="brand-mark">F</span><span>FreshBite</span></a>
+        <button class="mobile-menu" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="restaurants.html">Restaurants</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="account.html" class="active" data-user-label>Account</a>
+        </div>
+        <div class="nav-actions">
+          <a class="icon-btn cart-link" href="cart.html" aria-label="View cart">🛒<span class="cart-badge cart-count">0</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div class="container page-banner-inner">
+          <div>
+            <div class="breadcrumb">Home / Account</div>
+            <h1>My account</h1>
+          </div>
+          <button id="logout-btn" class="secondary-btn" type="button">Logout</button>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div id="account-login-prompt" class="container hidden">
+          <div class="empty-state">
+            <h3>Please log in to manage your account</h3>
+            <p>You can view your profile, orders, wishlist, and saved addresses after signing in.</p>
+            <a href="login.html" class="primary-btn">Login</a>
+          </div>
+        </div>
+
+        <div id="account-panel" class="container account-grid hidden">
+          <div>
+            <div class="profile-card">
+              <div class="account-hero">
+                <h3>Profile</h3>
+                <span class="badge">Verified</span>
+              </div>
+              <div class="profile-row"><strong>Name</strong><span id="profile-name">-</span></div>
+              <div class="profile-row"><strong>Email</strong><span id="profile-email">-</span></div>
+              <div class="profile-row"><strong>Phone</strong><span id="profile-phone">-</span></div>
+              <div class="profile-row"><strong>Address</strong><span id="profile-address">-</span></div>
+            </div>
+
+            <div class="address-card" style="margin-top: 24px;">
+              <h3>Saved delivery addresses</h3>
+              <div class="address-list">
+                <div class="list-item">No saved addresses yet. Add one in the form below.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="profile-card">
+              <h3>Edit profile</h3>
+              <form id="profile-form">
+                <div class="form-group">
+                  <label for="profile-full-name">Full name</label>
+                  <input class="form-control" id="profile-full-name" name="full-name" type="text" />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="profile-email">Email</label>
+                    <input class="form-control" id="profile-email-input" name="email" type="email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="profile-phone-input">Phone</label>
+                    <input class="form-control" id="profile-phone-input" name="phone" type="tel" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="profile-address-input">Address</label>
+                  <textarea class="textarea-control" id="profile-address-input" name="address" rows="3"></textarea>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="profile-city">City</label>
+                    <input class="form-control" id="profile-city" name="city" type="text" />
+                  </div>
+                  <div class="form-group">
+                    <label for="profile-postal-code">Postal code</label>
+                    <input class="form-control" id="profile-postal-code" name="postal-code" type="text" />
+                  </div>
+                </div>
+                <button type="submit" class="primary-btn">Save changes</button>
+              </form>
+            </div>
+
+            <div class="order-history-card" style="margin-top: 24px;">
+              <h3>Order history</h3>
+              <div id="order-list" class="order-list"></div>
+            </div>
+
+            <div class="wishlist-card" style="margin-top: 24px;">
+              <h3>Wishlist</h3>
+              <div id="wishlist-panel" class="wishlist-list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 16px; color: var(--white);"><span class="brand-mark">F</span><span>FreshBite</span></div>
+          <p>Your food journey, saved for repeat ordering and personalized convenience.</p>
+        </div>
+        <div>
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <ul>
+            <li>Open daily</li>
+            <li>10 AM - 10 PM</li>
+            <li>Demo account only</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">© 2026 FreshBite</div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/account.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | FreshBite</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="brand-mark">F</span><span>FreshBite</span></a>
+        <button class="mobile-menu" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="restaurants.html">Restaurants</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="active">Contact</a>
+          <a href="account.html" data-user-label>Account</a>
+        </div>
+        <div class="nav-actions">
+          <a class="icon-btn cart-link" href="cart.html" aria-label="View cart">🛒<span class="cart-badge cart-count">0</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-banner">
+        <div class="container page-banner-inner">
+          <div>
+            <div class="breadcrumb">Home / Contact</div>
+            <h1>Contact FreshBite</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div class="container auth-layout">
+          <div class="contact-panel">
+            <h3>Send us a message</h3>
+            <p style="color: rgba(45, 27, 18, 0.7);">This contact form is a frontend demo and doesn’t send real messages to a server.</p>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="contact-name">Name</label>
+                <input class="form-control" id="contact-name" name="name" type="text" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-email">Email</label>
+                  <input class="form-control" id="contact-email" name="email" type="email" />
+                </div>
+                <div class="form-group">
+                  <label for="contact-subject">Subject</label>
+                  <input class="form-control" id="contact-subject" name="subject" type="text" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea class="textarea-control" id="contact-message" name="message" rows="5"></textarea>
+              </div>
+              <button type="submit" class="primary-btn">Send message</button>
+              <p id="contact-status" style="margin-top: 12px; color: var(--success); font-weight:700;"></p>
+            </form>
+          </div>
+
+          <aside class="auth-side">
+            <h3>Contact details</h3>
+            <ul>
+              <li>Email: hello@freshbite.demo</li>
+              <li>Phone: +91 98765 43210</li>
+              <li>Business Hours: Mon-Sun, 9:00 AM - 10:00 PM</li>
+              <li>Location: Bengaluru, India</li>
+            </ul>
+
+            <div style="margin-top: 26px;">
+              <h4>FAQ</h4>
+              <div class="list-item">Q: Is this a real restaurant? A: No, it is a frontend demo project for learning.</div>
+              <div class="list-item" style="margin-top:10px;">Q: Can I place real orders? A: No. Orders are simulated locally in your browser.</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 16px; color: var(--white);"><span class="brand-mark">F</span><span>FreshBite</span></div>
+          <p>Questions, feedback, or demo inquiries are welcome.</p>
+        </div>
+        <div>
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <ul>
+            <li>Mon-Sun</li>
+            <li>9 AM – 10 PM</li>
+            <li>Demo support</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">© 2026 FreshBite</div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
